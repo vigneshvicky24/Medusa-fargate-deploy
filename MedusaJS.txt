@@ -1,0 +1,36 @@
+✅ Prerequisites:
+Node.js installed (node -v)
+
+npm installed (npm -v)
+
+Git (optional, for pushing code to GitHub)
+
+Docker (for testing locally if needed)
+
+🏁 Commands to Run on Your Local Machine:
+# 1. Open a terminal or command prompt
+# 2. Run this to create the Medusa app:
+npx create-medusa-app@latest my-medusa-backend
+
+# 3. Go into the directory
+cd my-medusa-backend
+
+# 4. Test locally
+npm install
+npm run develop
+📦 This will:
+Create a folder my-medusa-backend
+
+Set up a working MedusaJS backend inside
+
+Let you run and test Medusa locally
+
+✅ After this:
+Once it's working, you’ll:
+
+Add your Dockerfile
+
+Push the code to GitHub
+
+Use GitHub Actions to build/deploy the Docker image to AWS
+

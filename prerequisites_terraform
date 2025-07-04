@@ -1,0 +1,5 @@
+S3 backend for Terraform state (can be created manually)
+
+IAM user with necessary permissions
+
+AWS CLI configured

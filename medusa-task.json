@@ -1,0 +1,36 @@
+{
+  "family": "medusa-task",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::970547337517:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::970547337517:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "medusa-container",
+      "image": "970547337517.dkr.ecr.eu-north-1.amazonaws.com/medusa:latest",
+      "portMappings": [
+        {
+          "containerPort": 9000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "environment": [
+        {
+          "name": "NODE_ENV",
+          "value": "production"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/medusa",
+          "awslogs-region": "eu-north-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}
